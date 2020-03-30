@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible"
+            content="ie=edge">
+        <title>To Do List</title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,600&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="./css/normalize.css">
+        <link rel="stylesheet"
+            href="./css/styles.css">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="container">
+                <h1 class="header__logo"><a>To Do</a></h1>
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <button class="main-nav__btn addTask">
+                                <svg class="main-nav__svg svg">
+                                    <use href="./images/sprite.svg#plus"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="main-nav__item">
+                            <button class="main-nav__btn bell">
+                                <svg class="main-nav__svg">
+                                    <use href="./images/sprite.svg#bell"></use>
+                                </svg>
+                            </button>
+                        </li>
+                        <li class="main-nav__item">
+                            <button class="main-nav__btn svg">
+                                <svg class="main-nav__svg">
+                                    <use href="./images/sprite.svg#support"></use>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="sidebar">
+                <div class="sidebar__content">
+                    <form class="sidebar__form">
+                        <div class="sidebar__search">
+                            <h3 class="sidebar__search-name">Lists</h3>
+                            <div class="sidebar__btn">
+                            <button class="findList-btn">
+                                <svg class="findList-svg">
+                                    <use href="./images/sprite.svg#search"></use>
+                                </svg>
+                            </button>
+                            <button class="addList-btn">
+                                <svg class="addList-svg svg">
+                                    <use href="./images/sprite.svg#plus"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        </div>
+                        <ul>
+                        <li><input id="findList"
+                            class="is-closed"
+                            type="text"
+                            placeholder="Search list..."></li>
+                        <li><input class="is-closed"
+                            id="newList"
+                            type="text"
+                            placeholder="New List..."></li>
+                        </ul>
+                        <button class="sidebar__list MyList">MyList</button>
+                    </form>
+                </div>
+
+            </section>
+            <section class="todo">
+                <ul class="MyList list">MyList
+                    <li class="todo__list-item">
+                    </li>
+                </ul>
+                <div class="overlay is-closed">
+                    <form class="form newTask">
+                        <ul class="form__list newTask">
+                            <h2 class="form__name newTask">New Task</h2>
+                            <li class="form__item newTask">
+                                <input class="newTask"
+                                    id="name"
+                                    type="text"
+                                    placeholder="Your Task..."
+                                    required>
+                            </li>
+                            <li class="form__item newTask">
+                                <input id="due"
+                                    class="newTask"
+                                    name="Due To"
+                                    type="date">
+                            </li>
+                            <li class="form__item form__item-list newTask">
+                                <select id="list"
+                                    class="newTask"
+                                    name="Choose List"
+                                    required>
+                                    <option disabled>Choose List</option>
+                                    <option value="MyList">MyList</option>
+                                </select>
+                            </li>
+                            <li class="form__item newTask">
+                                <textarea id="notes"
+                                    class="newTask"
+                                    name="message"
+                                    placeholder="Notes"
+                                    style="resize: none;"></textarea>
+                            </li>
+                            <!-- <li class="form__item"><input id="priority" type="radio" placeholder="Priority"></li> -->
+                        </ul>
+                        <button class="submitTask"
+                            type="submit"
+                            value="Submit">Add New Task</button>
+
+                    </form>
+                </div>
+            </section>
+        </main>
+        <script src="./js/script.js"
+            type="module"></script>
+    </body>
+
+</html>
